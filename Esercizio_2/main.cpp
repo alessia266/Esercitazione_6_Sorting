@@ -70,7 +70,6 @@ void SortCompare(vector<T> v, unsigned int& sumMerge, unsigned int& sumBubble)
 }
 
 int main(int argc, char *argv[])
-//int main()
 {
     unsigned int iter = 15;
     unsigned int sumMerge = 0;
@@ -97,6 +96,7 @@ int main(int argc, char *argv[])
             sumBubble = 0;
 
 
+
             cout << "Integer vector\n" << endl;
             vector<int> vInt(dimension);
             if (mode == 1)
@@ -117,6 +117,7 @@ int main(int argc, char *argv[])
             }
             cout << "Duration Mergesort: " << sumMerge << " microseconds" << endl;
             cout << "Duration Bubblesort: " << sumBubble << " microseconds" << endl;
+
             //comparing durations
             if (sumMerge < sumBubble)
                 cout << "MergeSort faster than BubbleSort\n" << endl;
@@ -124,6 +125,10 @@ int main(int argc, char *argv[])
                 cout << "BubbleSort faster than MergeSort\n" << endl;
             else
                 cout << "Same duration\n" << endl;
+
+
+            sumMerge = 0;
+            sumBubble = 0;
 
 
             cout << "Double vector\n" << endl;
@@ -146,6 +151,7 @@ int main(int argc, char *argv[])
             }
             cout << "Duration Mergesort: " << sumMerge << " microseconds" << endl;
             cout << "Duration Bubblesort: " << sumBubble << " microseconds" << endl;
+
             //comparing durations
             if (sumMerge < sumBubble)
                 cout << "MergeSort faster than BubbleSort\n" << endl;
